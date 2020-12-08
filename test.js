@@ -7,8 +7,8 @@ const puppeteer = require('puppeteer');
     await page.type('#text-input-what', 'developer');
     const elements = await page.$x('//*[@id="whatWhereFormId"]/div[3]/button')
     await elements[0].click() 
-    var linkTexts = await page.$$eval(".title",
-                elements=> elements.map(item=>item.textContent))
+    //var linkTexts = await page.$$eval(".title",
+    //            elements=> elements.map(item=>item.textContent))
     await page.screenshot({
         path: "./screenshot.jpg",
         type: "jpeg",
